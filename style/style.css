@@ -11,11 +11,8 @@ h1 {
     font-size: 28px;
 
 }
-tableTurn {
-    border-collapse: collapse;
-    position: relative;
-    display: flex;
-    font-size: 28px;
+#turnHolder {
+    font-size: 48px;
     }
 
 table {
