@@ -11,14 +11,19 @@ h1 {
     font-size: 28px;
 
 }
-
+tableTurn {
+    border-collapse: collapse;
+    position: relative;
+    display: flex;
+    font-size: 28px;
+    }
 
 table {
     border-collapse: collapse;
     position: relative;
     display: flex;
     font-size: 60px;
-    font-color: #666;
+    
     /* margin-left: auto;
     margin-right:auto; */
 
