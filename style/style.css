@@ -15,7 +15,11 @@ h1 {
     font-size: 48px;
     }
 
-table {
+#turnText {
+    font-size: 28px;
+    }
+
+#table {
     border-collapse: collapse;
     position: relative;
     display: flex;
