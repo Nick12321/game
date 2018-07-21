@@ -23,21 +23,57 @@ h1 {
     border-collapse: collapse;
     position: relative;
     display: flex;
-    font-size: 60px;
-    
-    /* margin-left: auto;
-    margin-right:auto; */
-
+    font-size: 160px;
 }
 
-/* table.center {
-    margin-left: auto;
-    margin-right:auto;
-} */
-
 td {
-   padding:80px;
-   border: 10px #666 solid;
+   padding:20px;
+   border: 5px #666 solid;
    text-align: center;
    width: 20%; 
+}
+#square0 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square1 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square2 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square3 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square4 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square5 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square6 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square7 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
+}
+#square8 {
+    font-size: 60px;
+    color: red;
+    text-align: center;
 }

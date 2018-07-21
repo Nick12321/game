@@ -29,14 +29,17 @@ function setTurnHolder(descTurn) {
 function playGame() {
     // let currentPlayer = $('#turnHolder').innerhtml;
     let currentPlayer = document.getElementById("turnHolder").innerHTML;
-    alert("playGame() currentPlayer is " + currentPlayer);
+    // alert("playGame() currentPlayer is " + currentPlayer);
     let playerO = new Array;
     let playerX = new Array;
-    $('#turnText').mousedown(function() {
-        alert("mousedown function called");
-    });
-    // $('#square').mousedown(function() {
-    //     alert("mousedown function called");
-    // });
-    // alert("We're here! Current player: " + currentPlayer);
+    let currSquare = "square";
+    for (var i = 0; i < 9; i++) {
+        squareName = currSquare + i;
+        $('#target').mousedown(function() {
+
+        });
+        // alert("in: " + squareName);
+    }
+    
+    
 }
