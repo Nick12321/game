@@ -38,7 +38,7 @@ function getMove(currentPlayer, playerOh, playerX) {
         alert('Player X'); 
     }
 
-    // $('#square0').mousedown(function() {
+    // $('#grid').mousedown(function() {
     //     // checkMove();
     //     // if((document.getElementById("square0").innerHTML) === None) {
     //     // if($('#square0').html() === '') {
@@ -46,9 +46,9 @@ function getMove(currentPlayer, playerOh, playerX) {
     //     move.push(0);
     //     alert('in square 0' + move);
     //     }
-    $('#square0').mousedown(function(){
+    $('#grid').mousedown(function(){
         move.push(0);        
-        document.getElementById("square0").innerhtml = '"X"';
+        // document.getElementById("square0").innerhtml = '"X"';
         alert('in square 0'+ move + currentPlayer);
     })
     $('#square1').mousedown(function() {
