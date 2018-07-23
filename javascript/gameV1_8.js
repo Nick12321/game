@@ -35,10 +35,10 @@ function getMove(currentPlayer, playerOh, playerX) {
         
     $(".grid").mousedown(function(){        
         currentSquare = ($(this).attr('id'));
-        alert(currentPlayer);
+        // alert(currentPlayer);
         // var text = $(this).text();
-        if ($(this).html() == '') {
-            $(this).html = currentPlayer;
+        if ($(this).html = '&nbsp') {
+            ($(this).html) = currentPlayer;
             move.push(currentSquare);
             alert('push' + push);
         }
