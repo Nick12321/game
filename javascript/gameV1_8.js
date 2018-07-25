@@ -18,8 +18,7 @@ $( document ).ready(function() {
     function playGame() {    
         let currentPlayer = document.getElementById("turnHolder").innerHTML;    
         let playerOh = new Array();
-        let playerX = new Array();
-        let move = 0;    
+        let playerX = new Array();        
         getMove(currentPlayer, playerOh, playerX);
     }
     
@@ -57,43 +56,48 @@ $( document ).ready(function() {
     }
     
     function checkWin(moves, currentPlayer) {
-        let win0 = new Array();
-       
         
-        // for (var i=0; i<3; i++) {
-        //     // let sub = 'square' + i;
-        //     // win0.push(sub);
-        //     alert('here!');
-        // }
-        // alert(currentSquare);
+        let winComb = new Array (0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 3, 6, 1, 4, 7, 2, 5, 8, 2, 4, 6, 0, 4, 8);        
+        let winningComb = [];        
+        let match = [];
+        let numMatch = moves.length;
+        let currentTemp = "";
+        let winTemp = "";      
+
+        for (var n=0; n<8; n++){
+            winningComb[n] = [];
+            for (var i=0; i<3; i++) {
+                let winNextNo = "square" + winComb.shift();
+                winningComb[n].push(winNextNo);
+            }            
+        }
+        
+
+        for (var c=0; c<8; c++) {
+            match = [];                        
+                  
+            for (var f=0; f<3; f++){
+                for (var d=0; d<numMatch; d++){
+                    if (winningComb[c][f] === moves[d]){
+                        winTemp = moves[d];
+                        match.push(winTemp);
+                        currentTemp = match.length;
+                        if (currentTemp > 2) {
+                            alert(currentPlayer + " HAS WON!!!");
+                            setTurnText(" HAS WON!!!");
+                            setTurnHolder(currentPlayer);
+                            location.reload();
+                        }
+                    }
+
+                }
+                
+            }
             
+  
+            }           
+        }
         
-        
-        
-        // let winComb = new Array (0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 3, 6, 1, 4, 7, 2, 5, 8, 2, 4, 6, 0, 4, 8);
-        // // let test = winComb.shift();
-        // let numb = playerOh.length;
-        // let ('win' + 0) = new Array(1, 2, 3, 4);
-        // alert(win0);
-            
-        // for (var i = 0; i < 8; i++){
-        //     let checkArray = 'win' + i;
-        //     let ('win' + i) = new Array();
-        //     for (var n = 0; n < 3; n++) {
-        //         ('win' + i).push(winComb[0]);
-        //         winComb.shift();
-        //     }
-        // }
-        // // let win0 = new Array();
-        // win0.push($(square0).attr('id'));
-        // win0.push($(square1).attr('id'));
-        // win0.push($(square2).attr('id'));
-        // alert(win0);
-    
-        // let win1 = ($(square1).attr('id')) + ($(square2).attr('id')) + ($(square3).attr('id'));
-        // alert(win1);
-    
-    }
     
     function setTurnText(descMove) {
         $('#turnText').html("   " + descMove);
@@ -103,3 +107,4 @@ $( document ).ready(function() {
         $('#turnHolder').html(descTurn);
     }
     
+       
